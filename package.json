@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "ts-node prisma/seed.ts",
+    "db:push": "prisma db push",
+    "seed": "prisma db seed",
     "test": "jest",
     "test:e2e": "playwright test",
     "prepare": "husky install"
@@ -46,5 +47,8 @@
     "@types/jest": "^29.5.3",
     "playwright": "^1.33.0",
     "ts-node": "^10.9.1"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   }
 }
