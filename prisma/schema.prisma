@@ -1,5 +1,11 @@
-generator client { provider = "prisma-client-js" }
-datasource db { provider = "sqlite"; url = env("DATABASE_URL") }
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
 
 model User {
   id            String   @id @default(cuid())
@@ -63,7 +69,7 @@ model Agent {
   description     String
   metaTitle       String?
   metaDescription String?
-  parameters      Json
+  parameters      String
   exampleOutput   String
   runs            Run[]
 }
@@ -72,7 +78,7 @@ model Run {
   id        Int      @id @default(autoincrement())
   userId    String
   agentId   Int
-  input     Json
+  input     String
   output    String
   createdAt DateTime @default(now())
   agent     Agent    @relation(fields: [agentId], references: [id], onDelete: Cascade)
