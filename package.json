@@ -31,7 +31,8 @@
     "@hookform/resolvers": "^3.0.0",
     "zustand": "^4.3.6",
     "next-intl": "^3.0.0",
-    "lucide-react": "^0.427.0"
+    "lucide-react": "^0.427.0",
+    "@next-auth/prisma-adapter": "^1.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
